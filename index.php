@@ -67,9 +67,10 @@
 	 echo("<br>".$indice ." : ".$valorArmazenado);
  }
 
-// array multidimensional matriz
+ //_______________________________________________________________ PARTE 2
+// array multidimensional matriz indexada
 
- echo("<h3> Array multidimensional MATRIZ 3x3 </h3>");	
+ echo("<h3> Array multidimensional MATRIZ 3x3 INDEXADA </h3>");	
 
  $tabela = array(
 	 array("Atletico","MG",45),
@@ -113,4 +114,31 @@
 	
  //}
 
- //_______________________________________________________________
+ //_______________________________________________________________ PArte 3
+
+ // Criando matriz 3x3 associativa 
+ 
+
+ echo("<h3> Array multidimensional(MATRIZ) Associativa 3x3 </h3>");	
+
+ $tabela = array(
+	 array("nome" => "Atletico", "estado" => "MG","pontos" => 45),
+	 array("nome" => "Palmeiras","estado" => "SP","pontos" =>38),
+	 array("nome" => "Fortaleza","estado" => "CE","pontos" =>36)
+ );
+
+ echo ('<pre>');
+ print_r($tabela);
+ echo ('</pre>');
+
+
+ //percorrendo array multidimensional
+
+ echo("<h3> PERCORRENDO Array multidimensional(MATRIZ) Associativa 3x3 </h3>");	
+
+ for ($i=0; $i < sizeof($tabela) ; $i++) { 
+   
+	 echo("<br>".$tabela[$i]["nome"]." - ".$tabela[$i]["estado"]." - ".$tabela[$i]["pontos"]);
+   
+	
+ }
